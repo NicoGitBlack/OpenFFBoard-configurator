@@ -10,6 +10,8 @@ Be very careful when changing motor types, drivers or the power value.
 
 Incorrect settings may cause unintended movements or damage hardware.
 
+This fork is to add CyberGear motor, a specific firmware should be used.
+
 
 ### Installation:
 On older windows versions (older than Windows 10) CDC drivers may not load automatically.
