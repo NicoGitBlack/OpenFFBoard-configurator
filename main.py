@@ -49,6 +49,7 @@ import activelist
 import tmcdebug_ui
 import odrive_ui
 import vesc_ui
+import cybergear_ui
 import effects_monitor
 import effects_graph_ui
 import updater
@@ -527,6 +528,12 @@ class MainUi(PyQt6.QtWidgets.QMainWindow, base_ui.WidgetUI, base_ui.Communicatio
                     self.effects_graph_dlg.setEnabled(True)
                     self.actionEffectsMonitor.setEnabled(True)
                     self.actionEffects_forces.setEnabled(True)
+                elif classe_active["id"] == 0x8B or classe_active["id"] == 0x8C:
+                    classe = cybergear_ui.CyberGearUI(main=self, unique=classe_active["unique"])
+                    name_axis = classe_active["name"]
+                    self.active_classes[name] = classe
+                    self.add_tab(classe, name_axis)
+                    self.profile_ui.set_save_btn(True)
 
 
 
