@@ -146,6 +146,7 @@ class CommunicationHandler:
     def send_command(self, cls, cmd, instance=0, typechar="?",adr=None):
         """Send one command to the board."""
         self.comms.sendCommand(cls, cmd, instance=instance, typechar=typechar,adr=adr)
+        print(f"send_command {cls} {cmd} {instance} {typechar} {adr}")
 
     def send_commands(self, cls, cmds, instance=0, typechar="?",adr=None):
         """Send colection of command to the board."""

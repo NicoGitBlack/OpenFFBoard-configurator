@@ -215,7 +215,7 @@ p, li { white-space: pre-wrap; }
       <item row="2" column="1">
        <widget class="QSpinBox" name="spinBox_id">
         <property name="maximum">
-         <number>63</number>
+         <number>255</number>
         </property>
         <property name="singleStep">
          <number>1</number>
